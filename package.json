@@ -1,0 +1,12 @@
+{
+  "name": "babama-site-(light-version)",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "sass": "sass --watch style.scss style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
