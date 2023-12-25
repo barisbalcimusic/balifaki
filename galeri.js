@@ -26,7 +26,7 @@ async function fetchData() {
         document.getElementById("img-field").appendChild(imageData);
         imageData.classList.add("preview-img");
         imageData.setAttribute("id", "preview-img");
-        imageData.setAttribute("src", `./images/pictures  /${i}.jpg`);
+        imageData.setAttribute("src", `./images/pictures/${i}.jpg`);
         imageData.setAttribute("imgNumber", i);
         let imageNumber = imageData.getAttribute("imgNumber") - 1;
         if (data[imageNumber].length != 0) {
