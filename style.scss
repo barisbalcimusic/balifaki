@@ -29,71 +29,6 @@ body {
   user-select: none;
   overflow-x: hidden;
 }
-.hidden-field {
-  display: none;
-  width: 100%;
-  height: 100%;
-}
-.visible-field {
-  @include flex-col-center;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-}
-.bg-field {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-.bg-field:hover {
-  cursor: pointer;
-}
-.img-div {
-  height: 90%;
-  position: relative;
-}
-.img-field {
-  @include flex-col-center;
-  height: 100%;
-}
-.preview-img {
-  height: 100%;
-  object-fit: cover;
-}
-.caption {
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  // height: 100px;
-  position: absolute;
-  font-size: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 15px;
-}
-.arrow {
-  color: white;
-  position: absolute;
-  z-index: 50;
-  font-size: 50px;
-  color: rgb(226, 223, 223);
-}
-.arrow:hover {
-  color: white;
-  cursor: pointer;
-}
-.arrow-left {
-  left: 20px;
-}
-.arrow-right {
-  right: 20px;
-}
 /*-------------------- MAIN -------------------- */
 main {
   width: 100%;
@@ -144,11 +79,10 @@ nav li {
   list-style: none;
   height: 100%;
   @include flex-col-center;
-  padding: 0 2%;
+  padding: 0 25px;
 }
 nav li:hover {
   cursor: pointer;
-
   background-color: var(--navHover);
 }
 nav a {
@@ -161,7 +95,7 @@ nav a {
   border-radius: 5px;
   background-color: white;
   position: absolute;
-  right: 30px;
+  right: 5px;
 }
 #youtube-audio:hover {
   background-color: var(--navHover);
@@ -193,17 +127,32 @@ nav a {
 }
 .slideshow-container {
   @include flex-col-center;
-  width: 95%;
+  width: 90%;
+  height: 300px;
   max-width: 1000px;
   border-radius: 20px;
-  padding: 20px 0;
+  border: solid 1px gray;
+  border-radius: 5px;
+  padding: 2%;
+  background-color: rgb(39, 38, 38);
 }
-#slideshow-img {
-  transition: opacity 1s ease-in-out, transform 1s ease-in;
+.slideshow-img {
+  transition: opacity 1s ease-in-out;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
+.afis-section {
+  @include flex-col-center;
+  padding: 20px;
+}
+.afis {
+  width: 600px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px 0px black;
+}
+//GALERI PAGE
 h2 {
   width: 100%;
   text-align: center;
@@ -213,55 +162,64 @@ h2 {
   margin: 20px 0;
   text-transform: uppercase;
 }
-// ###### KOYUMUZ ######
-.koyumuz-section {
-  @include flex-col-center;
-  padding: 10px;
-  gap: 20px;
-  text-align: center;
-  background: linear-gradient(
-    to bottom,
-    white,
-    var(--color2) 3%,
-    var(--color2),
-    var(--color2) 97%,
-    white
-  );
-}
-.tanitim-text {
-  font-size: 2rem;
-  width: 80%;
-  text-align: justify;
-}
-.devamini-oku {
-  color: red;
-  font-weight: bold;
-}
-.devamini-oku:hover {
-  color: var(--hover);
-  cursor: pointer;
-}
-.video-div {
-  width: 300px;
-  height: 200px;
-  margin: 20px 0;
-  position: relative;
-  padding: 20% 30%;
-}
-.tanitim-video {
+.hidden-field {
+  display: none;
   width: 100%;
   height: 100%;
-  position: absolute;
+}
+.visible-field {
+  @include flex-col-center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
 }
-.tanitim-video:hover {
-  box-shadow: 0px 0px 8px 0px var(--hover);
+.bg-field {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.bg-field:hover {
+  cursor: pointer;
+}
+.img-div {
+  height: 90%;
+  position: relative;
+}
+.img-field {
+  @include flex-col-center;
+  height: 100%;
+}
+.preview-img {
+  height: 100%;
+  object-fit: cover;
+}
+.arrow {
+  color: white;
+  position: absolute;
+  z-index: 50;
+  font-size: 50px;
+  color: rgb(226, 223, 223);
+}
+.arrow:hover {
+  color: white;
+  cursor: pointer;
+}
+.arrow-left {
+  left: 20px;
+}
+.arrow-right {
+  right: 20px;
 }
 // ###### ADRES ######
 .adres-section {
   @include flex-col-center;
-  background-color: var(--color2);
   text-align: center;
   font-size: 20px;
 }

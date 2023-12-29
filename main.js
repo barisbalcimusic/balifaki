@@ -1,47 +1,29 @@
 //-------------- SLIDESHOW --------------
 
-const imagePath = "./images/anasayfa-resimler/";
-const totalImages = 6;
+const imagePath = "./images/pictures/";
+const totalImages = 68;
 let currentIndex = 1;
 const slideshowImage = document.getElementById("slideshow-img");
 
 function showNextImage() {
   slideshowImage.style.opacity = 0;
-  slideshowImage.style.transform = "scale(0.98)";
   setTimeout(() => {
-    slideshowImage.src = `${imagePath}${currentIndex}.png`;
+    slideshowImage.src = `${imagePath}${currentIndex}.jpg`;
     slideshowImage.style.opacity = 1;
-    slideshowImage.style.transform = "scale(1)";
     slideshowImage.setAttribute("alt", "galeriden resimler");
     currentIndex = (currentIndex % totalImages) + 1;
-  }, 1000); // 1 saniye sonra resmi değiştir
+  }, 1000);
 }
 
-showNextImage(); // İlk resmi göster
+showNextImage();
 
-const interval = setInterval(showNextImage, 5000); // 3 saniyede bir resmi güncelle
+const interval = setInterval(showNextImage, 8000);
 
 const slideshowContainer = document.querySelector(".slideshow-container");
 
 slideshowContainer.addEventListener("click", () => {
   clearInterval(interval);
 });
-
-//-------------- TEXT PREVIEW --------------
-let screenWidth = screen.width;
-console.log(screenWidth);
-if (screenWidth <= 768) {
-  let text = document.getElementById("tanitim-text");
-  let fullText = document.getElementById("tanitim-text").textContent;
-  let previewText = fullText.substring(0, 400) + "... ";
-
-  function showFullText() {
-    text.innerHTML = fullText;
-  }
-  text.innerHTML =
-    previewText +
-    "<em class='devamini-oku' onclick='showFullText();'>devamını oku</em>";
-}
 
 // PLAYER
 
@@ -96,4 +78,12 @@ function onYouTubeIframeAPIReady() {
       },
     },
   });
+}
+
+window.addEventListener("load", function () {
+  play();
+});
+
+function play() {
+  document.getElementById("youtube-audio").click();
 }
