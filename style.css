@@ -179,10 +179,13 @@ nav a {
   justify-content: center;
   align-items: center;
   padding: 20px;
+  width: 100%;
 }
 
 .afis {
-  width: 600px;
+  width: 50%;
+  min-width: 320px;
+  max-width: 700px;
   margin-bottom: 10px;
   border-radius: 15px;
   box-shadow: 0px 0px 5px 0px black;
@@ -358,6 +361,7 @@ footer a:hover {
 @media screen and (min-width: 1280px) {
   h2 {
     font-size: 25px;
+    margin: 30px 0;
   }
   .galeri-container {
     grid-template-columns: repeat(4, 1fr);
@@ -366,7 +370,7 @@ footer a:hover {
     padding-bottom: 20px;
   }
   .galeri-section {
-    padding: 20px 0;
+    padding: 0 0 20px 0;
   }
   .slideshow-container {
     height: 700px;

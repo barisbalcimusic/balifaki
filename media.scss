@@ -19,6 +19,7 @@
 @media screen and (min-width: 1280px) {
   h2 {
     font-size: 25px;
+    margin: 30px 0;
   }
   .galeri-container {
     grid-template-columns: repeat(4, 1fr);
@@ -27,7 +28,7 @@
     padding-bottom: 20px;
   }
   .galeri-section {
-    padding: 20px 0;
+    padding: 0 0 20px 0;
   }
   .slideshow-container {
     height: 700px;
