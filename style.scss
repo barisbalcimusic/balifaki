@@ -212,6 +212,8 @@ h2 {
   width: 95%;
   height: 95%;
   object-fit: contain;
+  position: relative;
+  z-index: 50;
 }
 .galeri-img {
   width: 320px;
