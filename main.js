@@ -31,7 +31,7 @@ function onYouTubeIframeAPIReady() {
   var element = document.getElementById("youtube-audio");
   var imgElement = document.createElement("img");
   imgElement.setAttribute("id", "youtube-icon");
-  imgElement.style.cssText = "cursor: pointer; cursor: hand";
+  imgElement.style.cssText = "cursor: pointer;";
   element.appendChild(imgElement);
 
   var playerElement = document.createElement("div");

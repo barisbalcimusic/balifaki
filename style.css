@@ -108,19 +108,6 @@ nav a {
   text-decoration: none;
 }
 
-#youtube-audio {
-  padding: 4px 8px;
-  border-radius: 5px;
-  background-color: white;
-  position: absolute;
-  right: 5px;
-}
-
-#youtube-audio:hover {
-  background-color: var(--navHover);
-  cursor: pointer;
-}
-
 .galeri-section {
   display: flex;
   flex-direction: column;
@@ -133,22 +120,38 @@ nav a {
 .galeri-container {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
+  margin-top: 20px;
   gap: 20px;
 }
 
-.galeri-img {
-  width: 320px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0px 0px 5px 0px rgb(189, 188, 188);
-  transition: transform 0.5s;
+.music-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
 }
 
-.galeri-img:hover {
+.music-text {
+  font-size: 15px;
+}
+
+#youtube-audio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 5px;
+  background-color: var(--color3);
+  width: 30px;
+  height: 30px;
+}
+
+#youtube-audio:hover {
+  background-color: red;
   cursor: pointer;
-  transform: scale(1.02);
-  box-shadow: 0px 0px 5px 1px var(--hover);
 }
 
 .slideshow-container {
@@ -205,6 +208,7 @@ h2 {
   display: none;
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .visible-field {
@@ -234,6 +238,19 @@ h2 {
   cursor: pointer;
 }
 
+.exit {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  color: white;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.exit:hover {
+  color: red;
+}
+
 .img-div {
   height: 90%;
   position: relative;
@@ -248,8 +265,24 @@ h2 {
 }
 
 .preview-img {
-  height: 100%;
+  width: 95%;
+  height: 95%;
+  object-fit: contain;
+}
+
+.galeri-img {
+  width: 320px;
+  height: 200px;
   object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 0px rgb(189, 188, 188);
+  transition: transform 0.5s;
+}
+
+.galeri-img:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  box-shadow: 0px 0px 5px 1px var(--hover);
 }
 
 .arrow {
@@ -350,6 +383,7 @@ footer a:hover {
   }
   .galeri-container {
     grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
   }
   #youtube-audio {
     right: 50px;
@@ -364,13 +398,19 @@ footer a:hover {
     margin: 30px 0;
   }
   .galeri-container {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-    margin-top: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
     padding-bottom: 20px;
   }
   .galeri-section {
     padding: 0 0 20px 0;
+  }
+  .galeri-img {
+    width: 500px;
+    height: 500px;
+  }
+  .galeri-img:last-child {
+    object-fit: contain;
   }
   .slideshow-container {
     height: 700px;

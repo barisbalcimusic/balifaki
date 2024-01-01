@@ -2,6 +2,7 @@
 for (let i = 1; i < 69; i++) {
   let bg = document.getElementById("bg-field");
   let field = document.getElementById("field");
+  let exit = document.getElementById("exit");
 
   let image = document.createElement("img");
   document.getElementById("galeri-container").appendChild(image);
@@ -10,6 +11,7 @@ for (let i = 1; i < 69; i++) {
 
   image.addEventListener("click", show);
   bg.addEventListener("click", hide);
+  exit.addEventListener("click", hide);
 
   function show() {
     field.classList.remove("hidden-field");
@@ -34,9 +36,5 @@ for (let i = 1; i < 69; i++) {
 }
 
 window.addEventListener("load", function () {
-  play();
-});
-
-function play() {
   document.getElementById("youtube-audio").click();
-}
+});

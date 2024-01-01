@@ -7,6 +7,7 @@
   }
   .galeri-container {
     grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
   }
   #youtube-audio {
     right: 50px;
@@ -22,13 +23,19 @@
     margin: 30px 0;
   }
   .galeri-container {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-    margin-top: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
     padding-bottom: 20px;
   }
   .galeri-section {
     padding: 0 0 20px 0;
+  }
+  .galeri-img {
+    width: 500px;
+    height: 500px;
+  }
+  .galeri-img:last-child {
+    object-fit: contain;
   }
   .slideshow-container {
     height: 700px;
