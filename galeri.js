@@ -1,9 +1,12 @@
 // GALERI
-let bg = document.getElementById("bg-field");
-let field = document.getElementById("field");
-let exit = document.getElementById("exit");
-let image = document.getElementsByClassName("galeri-img");
-let imageArray = Array.from(image);
+
+let bg, field, exit, image, imageArray;
+
+bg = document.getElementById("bg-field");
+field = document.getElementById("field");
+exit = document.getElementById("exit");
+image = document.getElementsByClassName("galeri-img");
+imageArray = Array.from(image);
 
 imageArray.forEach((image) => {
   image.addEventListener("click", show);

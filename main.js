@@ -1,7 +1,7 @@
 //-------------- SLIDESHOW --------------
 
 const imagePath = "./images/pictures/";
-const totalImages = 68;
+const totalImages = 62;
 let currentIndex = 1;
 const slideshowImage = document.getElementById("slideshow-img");
 
@@ -10,20 +10,13 @@ function showNextImage() {
   setTimeout(() => {
     slideshowImage.src = `${imagePath}${currentIndex}.jpg`;
     slideshowImage.style.opacity = 1;
-    slideshowImage.setAttribute("alt", "galeriden resimler");
     currentIndex = (currentIndex % totalImages) + 1;
-  }, 1000);
+  }, 1500);
 }
 
 showNextImage();
 
-const interval = setInterval(showNextImage, 7500);
-
-const slideshowContainer = document.querySelector(".slideshow-container");
-
-slideshowContainer.addEventListener("click", () => {
-  clearInterval(interval);
-});
+const interval = setInterval(showNextImage, 8000);
 
 // PLAYER
 

@@ -94,7 +94,7 @@ nav a {
 .galeri-section {
   @include flex-col-center;
   width: 100%;
-  padding: 0 0 20px 0;
+  margin-bottom: 20px;
 }
 .galeri-container {
   display: grid;
@@ -141,16 +141,14 @@ nav a {
 }
 .afis-section {
   @include flex-col-center;
-  padding: 20px;
   width: 100%;
 }
 .afis {
-  width: 50%;
+  width: 90%;
   min-width: 320px;
-  max-width: 700px;
-  margin-bottom: 10px;
+  max-width: 500px;
   border-radius: 15px;
-  box-shadow: 0px 0px 5px 0px black;
+  box-shadow: 0px 0px 10px 0px rgb(213, 213, 213);
 }
 //GALERI PAGE
 h2 {
@@ -254,10 +252,10 @@ h2 {
 .adres-div {
   width: 100%;
   background-color: white;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 .adres-div h2 {
-  margin-top: 0;
+  margin: 20px 0;
 }
 .harita {
   width: 80%;
