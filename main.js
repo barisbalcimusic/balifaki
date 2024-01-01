@@ -17,7 +17,7 @@ function showNextImage() {
 
 showNextImage();
 
-const interval = setInterval(showNextImage, 8000);
+const interval = setInterval(showNextImage, 7500);
 
 const slideshowContainer = document.querySelector(".slideshow-container");
 
@@ -87,3 +87,7 @@ window.addEventListener("load", function () {
 function play() {
   document.getElementById("youtube-audio").click();
 }
+
+document.getElementById("test").addEventListener("click", () => {
+  document.getElementById("audio").click();
+});

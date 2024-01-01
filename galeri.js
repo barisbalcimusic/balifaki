@@ -1,42 +1,29 @@
 // GALERI
+let bg = document.getElementById("bg-field");
+let field = document.getElementById("field");
+let exit = document.getElementById("exit");
+let image = document.getElementsByClassName("galeri-img");
+let imageArray = Array.from(image);
 
-for (let i = 1; i < 69; i++) {
-  let bg = document.getElementById("bg-field");
-  let field = document.getElementById("field");
-  let exit = document.getElementById("exit");
-
-  // let image = document.createElement("img");
-  // document.getElementById("galeri-container").appendChild(image);
-  // image.classList.add("galeri-img");
-  // image.setAttribute("src", `./images/pictures/${i}.jpg`);
-
-  let image = document.getElementsByClassName("galeri-img");
+imageArray.forEach((image) => {
   image.addEventListener("click", show);
-  bg.addEventListener("click", hide);
-  exit.addEventListener("click", hide);
+});
 
-  function show() {
-    field.classList.remove("hidden-field");
-    field.classList.add("visible-field");
-    document.body.style.overflowY = "hidden";
+bg.addEventListener("click", hide);
+exit.addEventListener("click", hide);
 
-    // let imageData = document.createElement("img");
-    // document.getElementById("img-field").appendChild(imageData);
-    // imageData.classList.add("preview-img");
-    // imageData.setAttribute("id", "preview-img");
+function show(event) {
+  field.classList.remove("hidden-field");
+  field.classList.add("visible-field");
+  document.body.style.overflowY = "hidden";
+  document.getElementById("preview-img").src = event.target.src;
+}
 
-    let image = document.getElementById("galeri-img");
-    imageData.setAttribute("src", `./images/pictures/${i}.jpg`);
-    // imageData.setAttribute("imgNumber", i);
-    // let imageNumber = imageData.getAttribute("imgNumber") - 1;
-  }
-
-  function hide() {
-    field.classList.remove("visible-field");
-    field.classList.add("hidden-field");
-    document.body.style.overflowY = "visible";
-    document.getElementById("preview-img").remove();
-  }
+function hide() {
+  field.classList.remove("visible-field");
+  field.classList.add("hidden-field");
+  document.body.style.overflowY = "visible";
+  document.getElementById("preview-img").src = "";
 }
 
 window.addEventListener("load", function () {
